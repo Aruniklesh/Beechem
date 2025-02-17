@@ -24,11 +24,27 @@ public class phase {
 		Thread.sleep(1000);
 		driver.findElement(By.name("phase_name")).sendKeys("ISHTECHTEST");
 		Thread.sleep(1000);
-		//driver.findElement(By.xpath("//button[.='SAVE']")).click();
+		driver.findElement(By.xpath("//button[.='SAVE']")).click();
 		//canceling by clicking x mark 
-		driver.findElement(By.xpath("//div[@class='MuiBox-root css-i3pgaz']//button[contains(@class,'MuiButtonBase-root')]")).click();
+		//driver.findElement(By.xpath("//div[@class='MuiBox-root css-i3pgaz']//button[contains(@class,'MuiButtonBase-root')]")).click();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//button[.='Cancel anyway']")).click();
+		//driver.findElement(By.xpath("//button[.='Cancel anyway']")).click();
+		System.out.println("Phase Saved Successfully");
+
+		return this;
+	}
+	public phase deletePhase(WebDriver driver) throws Exception {
+		Thread.sleep(1000);
+		driver.findElement(By.name("search")).sendKeys("ISHTECHTEST");		
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//div[@class='MuiBox-root css-oqsqcn']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("(//ul[contains(@class, 'MuiList-root MuiList-padding MuiMenu')]//li)[2]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[.='Delete']")).click();
+		Thread.sleep(1000);
+		System.out.println("Phase Deleted Successfully");
+
 		return this;
 	}
 

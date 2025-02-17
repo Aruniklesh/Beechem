@@ -16,8 +16,7 @@ public class groups extends login{
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//button[.='SAVE']")).click();
 		Thread.sleep(1000);
-		System.out.println("Details Saved Successfully");
-
+		System.out.println("Groups Saved Successfully");
 		
 	}
 	public void deleteGroupBySearch(WebDriver driver) throws Exception {
@@ -33,7 +32,7 @@ public class groups extends login{
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//button[.='Delete']")).click();
 		Thread.sleep(1000);
-		System.out.println("Details Deleted Successfully");
+		System.out.println("Groups Deleted Successfully");
 
 
 	}}

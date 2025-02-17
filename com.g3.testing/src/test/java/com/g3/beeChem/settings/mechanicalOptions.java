@@ -24,11 +24,9 @@ public class mechanicalOptions extends login{
 		driver.findElement(By.xpath("//button[.='SAVE']")).click();
 		System.out.println("Mechanical Options Saved Successfully");
 
-
 	}
 	public void deleteMechOptions(WebDriver driver) throws Exception {
 		Thread.sleep(1000);
-
 		driver.findElement(By.name("search")).sendKeys("TESTING Up to ");		
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//div[@class='MuiBox-root css-oqsqcn']")).click();
@@ -38,7 +36,6 @@ public class mechanicalOptions extends login{
 		driver.findElement(By.xpath("//button[.='Delete']")).click();
 		Thread.sleep(1000);
 		System.out.println("Mechanical Options Deleted Successfully");
-
 	
 	}
 }

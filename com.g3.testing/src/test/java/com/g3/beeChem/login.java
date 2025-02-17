@@ -33,7 +33,6 @@ public class login {
 		String username = property.getProperty("username");
 		String password = property.getProperty("password");
 
-
 		//chrome browser
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", driverlocation);
@@ -62,20 +61,20 @@ public class login {
 		driver.findElement(By.name("email")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.xpath("//*[.='Login']")).click();
-
 		WebElement heading = driver.findElement(By.xpath("//*[.=' Users Details']"));
 		String text = heading.getText();
 		if (text.equals("Users Details")) {
 			System.out.println("Log in Successfull");
 		}
-		else {
+		else {	
 			System.out.println("Log in UN- Successfull");
 
 		}
-
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//p[.='Settings']")).click();
+		Thread.sleep(1000);
 		//mitecount
-		mitecountpage log = new mitecountpage();
-		log.settingSelect(driver);
+		//mitecountpage log = new mitecountpage();
 		//log.mitecancel(driver);
 		//log.addMiteCount(driver);
 		//log.deleteMiteCount(driver);
@@ -84,30 +83,29 @@ public class login {
 		//phase phase = new phase();
 		//phase.addNewPhase(driver);
 		//phase.addPhase(driver);
+		//phase.deletePhase(driver);
 
 		//groups
 		//groups group = new groups();
 		//group.addNewGroup(driver);
 		//group.deleteGroupBySearch(driver);
-		
-		//chemical options	
-		//chemicalOptions che = new chemicalOptions();
-		//che.chemicalOptionsSelect(driver);
-		//che.addnewChemicalOption(driver);
-	//	che.deleteChemicalOptions(driver);
+
+		//chemical options
+		chemicalOptions che = new chemicalOptions();
+		che.chemicalOptionsSelect(driver);
+		che.addnewChemicalOption(driver);
+		che.deleteChemicalOptions(driver);
 
 		//mechanicaloptions
-		//mechanicalOptions mech = new mechanicalOptions();
-		//mech.mechanicalOptionsSelect(driver);
-		//mech.addNewMechanicalOptions(driver);
-		//mech.deleteMechOptions(driver);
+		mechanicalOptions mech = new mechanicalOptions();
+		mech.mechanicalOptionsSelect(driver);
+		mech.addNewMechanicalOptions(driver);
+		mech.deleteMechOptions(driver);
 
-		
 		//phaserules
 		//phaseRule rule = new phaseRule();
 		//rule.addPhaseRule(driver);
-		
-		
+
 
 	}
 

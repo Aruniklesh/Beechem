@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.g3.beeChem.call">
+      <class name="com.g3.beeChem.login">
         <methods>
-          <include name="miteCount"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.g3.beeChem.call -->
+      </class> <!-- com.g3.beeChem.login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
